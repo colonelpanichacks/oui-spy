@@ -2,30 +2,30 @@
 
 ![OUI-SPY](ouispy.png)
 
-**Professional ESP32-S3 based BLE detection system with integrated buzzer and power management.**
+**ESP32-S3 based BLE detection system with integrated buzzer and power management.**
 
-Available on [Tindie](https://www.tindie.com) - Ready-to-use, no additional components required.
+This board has some seriously sick PCB art. Available on [Tindie](https://www.tindie.com) - Ready-to-use, no additional components required.
 
 ## Firmware Options
 
 Choose the firmware that matches your use case:
 
-### 🔍 [OUI-SPY Detector](https://github.com/colonelpanichacks/ouispy-detector)
+### [OUI-SPY Detector](https://github.com/colonelpanichacks/ouispy-detector)
 
 **Multi-target BLE device scanner with OUI filtering**
 
 - Detects multiple devices simultaneously by MAC address or manufacturer OUI
-- Web-based configuration portal for easy target management
+- Web-based configuration portal for target management
 - Smart cooldown system prevents alert spam
 - Audio feedback with different beep patterns for new vs. re-detected devices
 - Persistent configuration storage
-- Perfect for general surveillance and device monitoring
+- Good for general surveillance and device monitoring
 
 **Use Cases:** Security monitoring, device inventory, general BLE scanning
 
 ---
 
-### 🦊 [OUI-SPY Foxhunter](https://github.com/colonelpanichacks/ouispy-foxhunter)
+### [OUI-SPY Foxhunter](https://github.com/colonelpanichacks/ouispy-foxhunter)
 
 **Precision proximity tracker for radio direction finding**
 
@@ -34,7 +34,7 @@ Choose the firmware that matches your use case:
 - Optimized for directional antenna usage and triangulation
 - Aggressive scanning parameters for maximum sensitivity
 - Clean audio feedback system for field operations
-- Perfect for foxhunting competitions and asset recovery
+- Good for foxhunting competitions and asset recovery
 
 **Use Cases:** Radio direction finding, asset tracking, security device location, RF analysis
 
@@ -71,7 +71,7 @@ Choose the firmware that matches your use case:
 - Secure web configuration with timeout protection
 - Local processing - no cloud dependencies
 
-### Professional Audio System
+### Audio System
 - Multiple beep patterns for different alert types
 - Variable frequency proximity indication
 - Clean startup and ready signals
@@ -79,7 +79,7 @@ Choose the firmware that matches your use case:
 
 ---
 
-**Choose your firmware above and start detecting!** 🚀
+**Choose your firmware above and start detecting.**
 
 ## License
 
