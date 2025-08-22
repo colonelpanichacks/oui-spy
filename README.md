@@ -4,7 +4,7 @@
 
 **ESP32-S3 based BLE detection system with integrated buzzer and power management.**
 
-This board has some seriously sick PCB art. Available on [Tindie](https://www.tindie.com) and [colonelpanic.tech](https://colonelpanic.tech) - Ready-to-use, no additional components required.
+This board has sick PCB art. Available on [Tindie](https://www.tindie.com) and [colonelpanic.tech](https://colonelpanic.tech) - Ready-to-use, no additional components required.
 
 ## Firmware Options
 
