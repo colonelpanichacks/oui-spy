@@ -4,7 +4,7 @@
 
 **ESP32-S3 based BLE detection system with integrated buzzer and power management.**
 
-This board has some seriously sick PCB art. Available on [Tindie](https://www.tindie.com) - Ready-to-use, no additional components required.
+This board has some seriously sick PCB art. Available on [Tindie](https://www.tindie.com) and [colonelpanic.tech](https://colonelpanic.tech) - Ready-to-use, no additional components required.
 
 ## Firmware Options
 
@@ -40,6 +40,21 @@ Choose the firmware that matches your use case:
 
 ---
 
+### [Flock You](https://github.com/colonelpanichacks/flock-you)
+
+**Advanced Flock Safety surveillance camera detection system**
+
+- Multi-method detection using WiFi promiscuous mode and BLE scanning
+- Real-time monitoring with comprehensive JSON output and audio alerts
+- MAC address filtering and SSID pattern matching for surveillance devices
+- Channel hopping across all 13 WiFi channels for maximum coverage
+- Smart audio alert system with boot sequence, detection alerts, and heartbeat
+- Built-in datasets from deflock.me for enhanced detection accuracy
+
+**Use Cases:** Surveillance detection, privacy protection, security assessment, research and education
+
+---
+
 ## Hardware Specifications
 
 - **MCU:** ESP32-S3 dual-core processor
@@ -51,7 +66,7 @@ Choose the firmware that matches your use case:
 
 ## Quick Start
 
-1. **Purchase** your OUI-SPY board from [Tindie](https://www.tindie.com)
+1. **Purchase** your OUI-SPY board from [Tindie](https://www.tindie.com) or [colonelpanic.tech](https://colonelpanic.tech)
 2. **Choose firmware** from the repositories above
 3. **Flash firmware** using PlatformIO or Arduino IDE
 4. **Power on** and connect to WiFi AP `snoopuntothem`
@@ -83,4 +98,4 @@ Choose the firmware that matches your use case:
 
 ## License
 
-Open source project. Hardware available commercially on Tindie. 
+Open source project. Hardware available commercially on [Tindie](https://www.tindie.com) and [colonelpanic.tech](https://colonelpanic.tech). 
