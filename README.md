@@ -1,155 +1,86 @@
-# OUI-SPY - Detector
+# OUI-SPY
 
 ![OUI-SPY](ouispy.png)
 
-Professional BLE scanning system that detects specific devices by MAC address or OUI with audio feedback.
+**ESP32-S3 based BLE detection system with integrated buzzer and power management.**
 
-## Hardware
+This board has some seriously sick PCB art. Available on [Tindie](https://www.tindie.com) - Ready-to-use, no additional components required.
 
-**OUI-SPY Board** - Available on [Tindie](https://www.tindie.com)
-- ESP32-S3 based detection system
-- Integrated buzzer and power management
-- Ready-to-use, no additional components required
+## Firmware Options
 
-**Alternative:** Standard ESP32-S3 with external buzzer on GPIO3
+Choose the firmware that matches your use case:
 
-## Available Firmwares
+### [OUI-SPY Detector](https://github.com/colonelpanichacks/ouispy-detector)
 
-### 1. OUI-SPY (Original)
-**Professional BLE scanning system for device detection**
-- OUI filtering for device manufacturers
-- Full MAC address matching
+**Multi-target BLE device scanner with OUI filtering**
+
+- Detects multiple devices simultaneously by MAC address or manufacturer OUI
+- Web-based configuration portal for target management
+- Smart cooldown system prevents alert spam
+- Audio feedback with different beep patterns for new vs. re-detected devices
 - Persistent configuration storage
-- Audio feedback system
-- Privacy-focused with MAC randomization
+- Good for general surveillance and device monitoring
 
-### 2. Flock You - Surveillance Camera Detection
-**Advanced detection system for Flock Safety cameras and surveillance devices**
+**Use Cases:** Security monitoring, device inventory, general BLE scanning
 
-[![Flock You](https://github.com/colonelpanichacks/flock-you/raw/main/flock.png)](https://github.com/colonelpanichacks/flock-you)
+---
 
-**Features:**
-- **Multi-Method Detection**: WiFi promiscuous mode + BLE scanning
-- **Surveillance Device Detection**: Flock Safety, Penguin, Pigvision systems
-- **Real-time Audio Alerts**: Boot sequence, detection alerts, heartbeat monitoring
-- **Comprehensive JSON Output**: Detailed device information and threat assessment
-- **Channel Hopping**: Automatic WiFi channel cycling (1-13)
-- **Pattern Recognition**: SSID, MAC prefix, and device name matching
+### [OUI-SPY Foxhunter](https://github.com/colonelpanichacks/ouispy-foxhunter)
 
-**Detection Coverage:**
-- WiFi probe requests and beacon frames
-- BLE advertisement scanning
-- Known surveillance device signatures
-- MAC address filtering with real-world databases
+**Precision proximity tracker for radio direction finding**
 
-**Audio Alert System:**
-- Boot sequence: 2 beeps (low → high pitch)
-- Detection alert: 3 fast high-pitch beeps
-- Heartbeat pulse: 2 beeps every 10 seconds while device in range
-- Range monitoring with departure detection
+- Single target MAC address tracking with real-time RSSI analysis
+- Variable proximity beeping based on signal strength (closer = faster beeps)
+- Optimized for directional antenna usage and triangulation
+- Aggressive scanning parameters for maximum sensitivity
+- Clean audio feedback system for field operations
+- Good for foxhunting competitions and asset recovery
 
-**Source Code:** [Flock You Repository](https://github.com/colonelpanichacks/flock-you)
+**Use Cases:** Radio direction finding, asset tracking, security device location, RF analysis
+
+---
+
+## Hardware Specifications
+
+- **MCU:** ESP32-S3 dual-core processor
+- **Connectivity:** WiFi 802.11n, Bluetooth 5.0, BLE
+- **Audio:** Integrated buzzer with PWM control
+- **Power:** USB-C powered with efficient power management
+- **Antenna:** Built-in antenna with option for external directional antenna
+- **Form Factor:** Compact PCB design optimized for portable use
 
 ## Quick Start
 
-1. **Power on device** - Creates WiFi AP `snoopuntothem` (password: `astheysnoopuntous`)
-2. **Connect and configure** - Navigate to `http://192.168.4.1`
-3. **Add targets** - Enter OUI prefixes (`AA:BB:CC`) or full MAC addresses
-4. **Save configuration** - Device automatically switches to scanning mode
+1. **Purchase** your OUI-SPY board from [Tindie](https://www.tindie.com)
+2. **Choose firmware** from the repositories above
+3. **Flash firmware** using PlatformIO or Arduino IDE
+4. **Power on** and connect to WiFi AP `snoopuntothem`
+5. **Configure targets** via web portal at `http://192.168.4.1`
 
-## Features
+## Technical Features
 
-### Detection System
-- OUI filtering for device manufacturers
-- Full MAC address matching
-- Persistent configuration storage
-- Automatic timeout handling
+### Advanced BLE Scanning
+- Maximum aggressive scanning parameters for optimal detection
+- Dual-core processing for concurrent web interface and scanning
+- Real-time RSSI analysis and signal strength reporting
+- Support for both active and passive scanning modes
 
-### Audio Feedback
-- 2 ascending beeps: Ready to scan
-- 3 beeps: New device detected
-- 2 beeps: Known device re-detected (5+ seconds)
-- Smart cooldown prevents spam
-
-### Privacy
-- MAC address randomization on boot
-- Stealth mode operation
+### Privacy & Security
+- MAC address randomization for stealth operation
 - No traceable hardware fingerprints
+- Secure web configuration with timeout protection
+- Local processing - no cloud dependencies
 
-## Installation
+### Audio System
+- Multiple beep patterns for different alert types
+- Variable frequency proximity indication
+- Clean startup and ready signals
+- Non-overlapping audio sequencing
 
-### PlatformIO
-```bash
-cd ouibuzzer-main/ouibuzzer
-python3 -m platformio run --target upload
-```
+---
 
-### Dependencies
-- NimBLE-Arduino ^1.4.0
-- ESP Async WebServer ^3.0.6
-- Preferences ^2.0.0
-
-## Configuration
-
-### Web Portal
-Access via `http://192.168.4.1` after connecting to `snoopuntothem` AP:
-
-**OUI Prefixes:** `AA:BB:CC` (matches specific manufacturers)
-**MAC Addresses:** `AA:BB:CC:12:34:56` (specific devices)
-
-Multiple entries supported (one per line).
-
-### Filter Types
-- **OUI:** First 3 bytes (manufacturer prefix)
-- **MAC:** Complete 6-byte address
-- **Format:** Supports colons, hyphens, or spaces
-
-## Operation
-
-### Startup Sequence
-1. MAC randomization (stealth mode)
-2. Configuration mode (20-second timeout)
-3. BLE scanning activation
-4. Target detection and audio alerts
-
-### Detection Logic
-- Continuous BLE scanning
-- Real-time MAC/OUI matching
-- Cooldown system prevents duplicate alerts
-- Memory management for device tracking
-
-## Serial Output
-
-```
-=== OUI Spy Enhanced BLE Detector ===
-Original MAC: d8:3b:da:45:aa:a0
-Randomized MAC: a2:f3:91:7e:8c:45
-
-=== STARTING SCANNING MODE ===
-Configured Filters:
-- AA:BB:CC (OUI)
-- AA:BB:CC:12:34:56 (MAC)
-
->> Match found! <<
-Device: AA:BB:CC:ab:cd:ef | RSSI: -45
-Filter matched: OUI
-```
-
-## Troubleshooting
-
-**No WiFi AP:** Wait 30 seconds after power-on
-**No web portal:** Ensure connected to `snoopuntothem`, disable mobile data
-**No audio:** Check buzzer connection (GPIO3)
-**No detection:** Verify target device is advertising BLE
-
-## Technical Specifications
-
-- **Platform:** ESP32-S3
-- **Scan interval:** 3 seconds
-- **Range:** 10-30 meters (typical)
-- **Storage:** NVS flash memory
-- **Processing:** Dual-core optimization
+**Choose your firmware above and start detecting.**
 
 ## License
 
-Open source project. Modifications welcome. 
+Open source project. Hardware available commercially on Tindie. 
