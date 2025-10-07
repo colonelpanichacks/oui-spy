@@ -40,6 +40,22 @@ Choose the firmware that matches your use case:
 
 ---
 
+### [OUI-SPY UniPwn](https://github.com/colonelpanichacks/Oui-Spy-UniPwn)
+
+**Advanced Unitree robot exploitation system with web interface**
+
+- BLE-based command injection exploits for Unitree Go2, G1, H1, and B2 robots
+- AutoPwn automation with 7-step exploitation and bulletproof error handling
+- Real-time BLE scanning with signal strength indicators and target management
+- Custom command injection with SSID/password injection methods
+- Comprehensive web interface with operations logging and system monitoring
+- AES-CFB128 encryption implementation for Unitree's crypto protocol
+- Based on original research by Bin4ry and d0tslash
+
+**Use Cases:** Security research, authorized penetration testing, educational robotics security assessment
+
+---
+
 ### [Flock You](https://github.com/colonelpanichacks/flock-you)
 
 **Advanced Flock Safety surveillance camera detection system**
