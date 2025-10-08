@@ -71,6 +71,22 @@ Choose the firmware that matches your use case:
 
 ---
 
+### [Sky-Spy](https://github.com/colonelpanichacks/Sky-Spy)
+
+**Drone RemoteID detection and real-time mapping system**
+
+- Dual-protocol scanning: WiFi promiscuous mode + BLE for OpenDroneID (ASTM F3411)
+- Real-time GPS coordinate extraction from drone broadcasts (location, altitude, speed, heading)
+- Operator/pilot location tracking and identification
+- JSON serial output for mesh-mapper.py visualization integration
+- Thread-safe audio alerts: 3 quick beeps on detection, heartbeat every 5 seconds
+- Multi-drone tracking: Monitor up to 8 drones simultaneously
+- Non-blocking buzzer implementation with dedicated FreeRTOS task
+
+**Use Cases:** Drone detection, airspace monitoring, RemoteID compliance verification, counter-UAS awareness
+
+---
+
 ## Hardware Specifications
 
 - **MCU:** ESP32-S3 dual-core processor
@@ -114,4 +130,4 @@ Choose the firmware that matches your use case:
 
 ## License
 
-Open source project. Hardware available commercially on [Tindie](https://www.tindie.com) and [colonelpanic.tech](https://colonelpanic.tech). 
+Open source project. Hardware available commercially on [Tindie](https://www.tindie.com) and [colonelpanic.tech](https://colonelpanic.tech).
