@@ -131,3 +131,5 @@ Choose the firmware that matches your use case:
 ## License
 
 Open source project. Hardware available commercially on [Tindie](https://www.tindie.com) and [colonelpanic.tech](https://colonelpanic.tech).
+
+I'm proud to partner with PCBWay for my PCB production needs. They've done an excellent job manufacturing the boards for my Oui-Spy runs, delivering high-quality PCBs with consistent results and reliable turnaround times. Their attention to detail and professional service has made them my go-to choice for bringing my hardware designs to life.
