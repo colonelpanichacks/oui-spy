@@ -103,6 +103,12 @@ Enhance your OUI-SPY with custom 3D printed cases and accessories:
 - Protective design for field use and storage
 - Easy access to controls and indicators
 
+### [OUI-SPY Keychain](https://makerworld.com/en/models/1798874-oui-spy-keychain#profileId-1918093)
+**by out0fstep**
+- Portable keychain case for everyday carry
+- Compact design for discreet operations
+- Easy access to all controls and indicators
+
 ### [OUI-SPY SMA Spacer](https://www.printables.com/model/1416886-oui-spy-sma-spacer?lang=cs)
 **by Nitekry D Paul**
 - SMA connector spacer for external antenna mounting
