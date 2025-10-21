@@ -109,6 +109,13 @@ Enhance your OUI-SPY with custom 3D printed cases and accessories:
 - Compact design for discreet operations
 - Easy access to all controls and indicators
 
+### [Mini Yagi Case](https://makerworld.com/en/models/1808177-mini-yagi-case#profileId-1928700)
+**by out0fstep**
+- Specialized case for directional antenna operations
+- Designed for use with [2.4G Directional Antenna 10.5dB High Gain SMA](https://a.co/d/fv8AJuY)
+- Optimized for foxhunting and directional RF detection
+- Professional-grade directional antenna setup
+
 ### [OUI-SPY SMA Spacer](https://www.printables.com/model/1416886-oui-spy-sma-spacer?lang=cs)
 **by Nitekry D Paul**
 - SMA connector spacer for external antenna mounting
