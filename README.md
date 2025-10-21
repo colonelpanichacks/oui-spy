@@ -50,7 +50,7 @@ Choose the firmware that matches your use case:
 - Custom command injection with SSID/password injection methods
 - Comprehensive web interface with operations logging and system monitoring
 - AES-CFB128 encryption implementation for Unitree's crypto protocol
-- Based on original research by Bin4ry and d0tslash
+- Based on original research by Bin4ry and d0splash
 
 **Use Cases:** Security research, authorized penetration testing, educational robotics security assessment
 
@@ -84,6 +84,30 @@ Choose the firmware that matches your use case:
 - Non-blocking buzzer implementation with dedicated FreeRTOS task
 
 **Use Cases:** Drone detection, airspace monitoring, RemoteID compliance verification, counter-UAS awareness
+
+---
+
+## 3D Prints
+
+Enhance your OUI-SPY with custom 3D printed cases and accessories:
+
+### [OUI-SPY Case with External Antenna Hole](https://makerworld.com/en/models/1807562-oui-spy-case-with-external-antenna-hole#profileId-1928111)
+**by out0fstep**
+- Protective case with external antenna hole for enhanced RF performance
+- Secure fit for OUI-SPY board with proper ventilation
+- Compatible with external directional antennas for foxhunting applications
+
+### [OUI-SPY Travel Case](https://makerworld.com/en/models/1805074-oui-spy-travel-case#profileId-1925189)
+**by out0fstep**
+- Compact travel case for portable OUI-SPY operations
+- Protective design for field use and storage
+- Easy access to controls and indicators
+
+### [OUI-SPY SMA Spacer](https://www.printables.com/model/1416886-oui-spy-sma-spacer?lang=cs)
+**by Nitekry D Paul**
+- SMA connector spacer for external antenna mounting
+- Ensures proper antenna positioning and signal optimization
+- Compatible with various SMA antenna configurations
 
 ---
 
