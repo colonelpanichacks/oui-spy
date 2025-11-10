@@ -122,7 +122,7 @@ Enhance your OUI-SPY with custom 3D printed cases and accessories:
 - Ensures proper antenna positioning and signal optimization
 - Compatible with various SMA antenna configurations
 
-### [OUI-SPY Tacktikewl yagi grip with accessory mounts](https://makerworld.com/en/models/1945916-tacti-kewl-yagi-grip-with-oui-spy-mount#profileId-2090387)
+### [OUI-SPY Tacti-kewl yagi grip with accessory mounts](https://makerworld.com/en/models/1945916-tacti-kewl-yagi-grip-with-oui-spy-mount#profileId-2090387)
 **by out0fstep**
 - Universal yagi Grip for foxhunting
 - picitinny rail compatibility
