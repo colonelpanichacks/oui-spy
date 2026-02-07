@@ -6,7 +6,7 @@
 
 This board has sick PCB art. Available on [Tindie](https://www.tindie.com) and [colonelpanic.tech](https://colonelpanic.tech) - Ready-to-use, no additional components required.
 
-> **All current firmware is passive and detection-only.** Nothing transmitted, nothing exploited — just listening. This is the **Blue Edition** (defensive/recon). A **Red Edition** with offensive capabilities is in development and will be released separately. Stay tuned.
+> The **Blue Edition** firmware suite is passive and detection-only — nothing transmitted, nothing exploited, just listening. The **Red Edition** brings offensive capabilities. First up: the [Remote-ID-Spoofer](https://github.com/colonelpanichacks/Remote-ID-Spoofer).
 
 ---
 
@@ -109,6 +109,26 @@ Includes all features from the standalone firmwares below, plus GPS wardriving i
 - Non-blocking buzzer implementation with dedicated FreeRTOS task
 
 **Use Cases:** Drone detection, airspace monitoring, RemoteID compliance verification, counter-UAS awareness
+
+---
+
+### [Remote-ID-Spoofer](https://github.com/colonelpanichacks/Remote-ID-Spoofer)
+
+**WiFi Remote ID spoofer and simulator with swarm mode**
+
+> **WARNING:** Transmitting spoofed Remote ID signals is illegal in many jurisdictions. See the [full legal disclaimer](https://github.com/colonelpanichacks/Remote-ID-Spoofer#legal-disclaimer) before use. This firmware is for authorized security research and education only.
+
+- WiFi-based ASTM F3411 Remote ID broadcast via NAN action frames and AP beacon vendor IEs
+- Flask web UI with cyberpunk dark theme, dual control panels, and map-based flight path planning
+- Swarm mode: spoof up to 20 simultaneous drones with configurable formations, offset/random flight paths, and stagger start
+- Realistic variation engine: altitude drift, speed variation, GPS jitter, heading wobble, TX timing jitter -- all toggleable with live sliders
+- Live telemetry feeds showing real-time broadcast data and per-drone swarm status
+- Play/Pause/Stop state machine with status ticker and TX count
+- Buzzer and LED feedback with mute controls
+- 1Hz broadcast rate matching real Remote ID transmitters
+- Inspired by [d0tslash](https://github.com/d0tslash) and **H.A.R.D** (Hackers Against Remote ID)
+
+**Use Cases:** Security research, Remote ID protocol analysis, counter-UAS testing, educational demonstration
 
 ---
 
