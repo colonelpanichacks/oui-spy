@@ -216,6 +216,3 @@ If you need to verify an OUI, use one of these lookup tools:
 ## License
 
 Open source project. Hardware available commercially on [Tindie](https://www.tindie.com) and [colonelpanic.tech](https://colonelpanic.tech).
-
-## PCBWAY Production
-I'm proud to partner with [PCBWay](https://www.pcbway.com/) for my PCB production needs. They've done an excellent job manufacturing the boards for my Oui-Spy runs, delivering high-quality PCBs with consistent results and reliable turnaround times. Their attention to detail and professional service has made them my go-to choice for bringing my hardware designs to life.
