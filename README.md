@@ -6,7 +6,7 @@
 
 This board has sick PCB art. Available on [Tindie](https://www.tindie.com) and [colonelpanic.tech](https://colonelpanic.tech) - Ready-to-use, no additional components required.
 
-> The **Blue Edition** firmware suite is passive and detection-only — nothing transmitted, nothing exploited, just listening. The **Red Edition** brings offensive capabilities. First up: the [Remote-ID-Spoofer](https://github.com/colonelpanichacks/Remote-ID-Spoofer).
+> **All current firmware is passive and detection-only.** Nothing transmitted, nothing exploited — just listening. This is the **Blue Edition** (defensive/recon). A **Red Edition** with offensive capabilities is in development and will be released separately. Stay tuned.
 
 ---
 
