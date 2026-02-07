@@ -2,13 +2,35 @@
 
 ![OUI-SPY](ouispy.png)
 
-**ESP32-S3 based BLE detection system with integrated buzzer and power management.**
+**ESP32-S3 based multi-mode detection system with integrated buzzer and power management.**
 
 This board has sick PCB art. Available on [Tindie](https://www.tindie.com) and [colonelpanic.tech](https://colonelpanic.tech) - Ready-to-use, no additional components required.
 
+> **All current firmware is passive and detection-only.** Nothing transmitted, nothing exploited — just listening. This is the **Blue Edition** (defensive/recon). A **Red Edition** with offensive capabilities is in development and will be released separately. Stay tuned.
+
+---
+
 ## Firmware Options
 
-Choose the firmware that matches your use case:
+### [OUI-SPY Unified Blue](https://github.com/colonelpanichacks/oui-spy-unified-blue) ⭐ RECOMMENDED
+
+**All four modes in one firmware — select from a boot menu, reboot, and go.**
+
+One flash, four capabilities. The unified build combines Detector, Foxhunter, Flock-You, and Sky Spy into a single firmware with a WiFi-based boot selector. No reflashing needed to switch modes.
+
+- **Boot selector** on AP `oui-spy` / `ouispy123` at `192.168.4.1`
+- **Hold BOOT button** 2 seconds to return to the selector from any mode
+- **MAC randomization** on every boot for privacy
+- **Global buzzer toggle** from the selector menu
+- **Distinct boot sounds** per mode — each plays its own retro tune so you know which firmware you're in
+- **Persistent mode selection** — remembers your last choice across power cycles
+- **Configurable AP** — change the selector SSID/password from the web UI
+
+Includes all features from the standalone firmwares below, plus GPS wardriving in Flock-You mode, session persistence to flash, KML export for Google Earth, and a prior session history tab.
+
+**Use Cases:** Everything. Flash once, switch modes on the fly.
+
+---
 
 ### [OUI-SPY Detector](https://github.com/colonelpanichacks/ouispy-detector)
 
@@ -56,18 +78,21 @@ Choose the firmware that matches your use case:
 
 ---
 
-### [Flock You](https://github.com/colonelpanichacks/flock-you)
+### [Flock-You](https://github.com/colonelpanichacks/flock-you)
 
-**Advanced Flock Safety surveillance camera detection system**
+**Flock Safety & Raven surveillance device detector with web dashboard and GPS wardriving**
 
-- Multi-method detection using WiFi promiscuous mode and BLE scanning
-- Real-time monitoring with comprehensive JSON output and audio alerts
-- MAC address filtering and SSID pattern matching for surveillance devices
-- Channel hopping across all 13 WiFi channels for maximum coverage
-- Smart audio alert system with boot sequence, detection alerts, and heartbeat
-- Built-in datasets from deflock.me for enhanced detection accuracy
+- BLE-only detection — MAC prefix, device name, manufacturer ID (`0x09C8` XUNTONG), Raven UUID fingerprinting
+- WiFi AP dashboard at `192.168.4.1` with live detection feed, pattern DB, and export tools
+- GPS wardriving via phone browser Geolocation API — tags every detection with coordinates
+- Session persistence to flash (SPIFFS) with prior session history tab
+- Export as JSON, CSV, or KML (Google Earth) — current and prior sessions
+- Flask-compatible serial JSON output for live desktop ingestion
+- Crow call boot sounds, detection alerts, and heartbeat audio feedback
+- 200 unique device storage with thread-safe FreeRTOS mutex
+- Companion Flask desktop app in `api/` folder with JSON/CSV/KML import
 
-**Use Cases:** Surveillance detection, privacy protection, security assessment, research and education
+**Use Cases:** Surveillance detection, privacy auditing, wardriving, security research
 
 ---
 
@@ -145,10 +170,10 @@ Enhance your OUI-SPY with custom 3D printed cases and accessories:
 ## Quick Start
 
 1. **Purchase** your OUI-SPY board from [Tindie](https://www.tindie.com) or [colonelpanic.tech](https://colonelpanic.tech)
-2. **Choose firmware** from the repositories above
-3. **Flash firmware** using PlatformIO or Arduino IDE
-4. **Power on** and connect to WiFi AP `snoopuntothem`
-5. **Configure targets** via web portal at `http://192.168.4.1`
+2. **Flash the [Unified Blue](https://github.com/colonelpanichacks/oui-spy-unified-blue) firmware** — one flash, all four modes
+3. **Power on** and connect to WiFi AP `oui-spy` / password `ouispy123`
+4. **Select your mode** from the web selector at `http://192.168.4.1`
+5. **Device reboots** into your chosen mode — hold BOOT 2s to return to menu anytime
 
 ## Technical Features
 
