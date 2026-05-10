@@ -4,7 +4,7 @@
 
 **ESP32-S3 based multi-mode detection system with integrated buzzer and power management.**
 
-This board has sick PCB art. Available on [Tindie](https://www.tindie.com) and [colonelpanic.tech](https://colonelpanic.tech) - Ready-to-use, no additional components required.
+This board has sick PCB art. Available on [colonelpanic.tech](https://colonelpanic.tech) - Ready-to-use, no additional components required.
 
 > **All current firmware is passive and detection-only.** Nothing transmitted, nothing exploited — just listening. This is the **Blue Edition** (defensive/recon). A **Red Edition** with offensive capabilities is in development and will be released separately. Stay tuned.
 
@@ -189,7 +189,7 @@ Enhance your OUI-SPY with custom 3D printed cases and accessories:
 
 ## Quick Start
 
-1. **Purchase** your OUI-SPY board from [Tindie](https://www.tindie.com) or [colonelpanic.tech](https://colonelpanic.tech)
+1. **Purchase** your OUI-SPY board from [colonelpanic.tech](https://colonelpanic.tech)
 2. **Flash the [Unified Blue](https://github.com/colonelpanichacks/oui-spy-unified-blue) firmware** — one flash, all four modes
 3. **Power on** and connect to WiFi AP `oui-spy` / password `ouispy123`
 4. **Select your mode** from the web selector at `http://192.168.4.1`
@@ -235,4 +235,4 @@ If you need to verify an OUI, use one of these lookup tools:
 
 ## License
 
-Open source project. Hardware available commercially on [Tindie](https://www.tindie.com) and [colonelpanic.tech](https://colonelpanic.tech).
+Open source project. Hardware available commercially on [colonelpanic.tech](https://colonelpanic.tech).
