@@ -105,7 +105,7 @@ Includes all features from the standalone firmwares below, plus GPS wardriving i
 - Operator/pilot location tracking and identification
 - JSON serial output for mesh-mapper.py visualization integration
 - Thread-safe audio alerts: 3 quick beeps on detection, heartbeat every 5 seconds
-- Multi-drone tracking: Monitor up to 8 drones simultaneously
+- Multi-drone tracking: Monitor multiple concurrent drones simultaneously
 - Non-blocking buzzer implementation with dedicated FreeRTOS task
 
 **Use Cases:** Drone detection, airspace monitoring, RemoteID compliance verification, counter-UAS awareness
