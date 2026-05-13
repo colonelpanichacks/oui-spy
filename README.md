@@ -32,6 +32,34 @@ Includes all features from the standalone firmwares below, plus GPS wardriving i
 
 ---
 
+### [OUI-SPY Unified Blue — Luke Switzer's fork](https://github.com/lukeswitz/oui-spy-unified-blue)
+
+**Downstream fork of Unified Blue with a modular engine runtime, BLE GATT control, ESP-NOW mesh, and a Flutter companion app.**
+
+A heavily refactored build by [Luke Switzer](https://github.com/lukeswitz). Same board, same four modes, but the firmware is rebuilt around an engine registry with proper WiFi mutual-exclusion, and a paired mobile app drives it over BLE GATT instead of (or alongside) the captive portal.
+
+**Firmware additions:**
+- Engine-registry runtime — detector / flock_wifi / flock_ble / foxhunter / skyspy / wardrive / unipwn engines start and stop independently, with mutual exclusion enforced between the WiFi engines
+- BLE GATT control surface — configure and switch modes from the phone without joining the AP
+- ESP-NOW mesh — coordinate multiple OUI-SPYs in range
+- Captive portal DNS on every AP mode
+- XIAO ESP32-C5 variant (`xiao-c5` branch) for dual-band 5 GHz scanning
+- 5 GHz Remote ID test transmitter (`rid-test-tx-c5/`) for validating Sky-Spy on C5 hardware
+- Atomic SPIFFS session persistence (copy+delete instead of the unreliable rename)
+
+**Companion app (Android shipping, iOS in development):**
+- Live detection feed with per-device details, actions, and one-tap copy of MAC, vendor, and location
+- Geofence exclusion zones to silence detections in known areas
+- Device and OUI ignore lists
+- Map view with multiple tile styles, OUI CSV lookup, and full Flock-You vendor table
+- Wardrive stats and per-session logs with detection counts
+- Local notifications and iOS Live Activities for background alerts
+- Prebuilt Android APK in [`companion/dist/`](https://github.com/lukeswitz/oui-spy-unified-blue/tree/companion/companion/dist)
+
+**Use Cases:** Same as Unified Blue, with a phone-based control plane. The C5 variant adds 5 GHz coverage for next-gen Remote ID transmitters.
+
+---
+
 ### [OUI-SPY Detector](https://github.com/colonelpanichacks/ouispy-detector)
 
 **Multi-target BLE device scanner with OUI filtering**
