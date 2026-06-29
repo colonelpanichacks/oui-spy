@@ -32,41 +32,6 @@ Includes all features from the standalone firmwares below, plus GPS wardriving i
 
 ---
 
-### [OUIspy Omni — Luke Switzer's fork](https://github.com/lukeswitz/oui-spy-unified-blue)
-
-**App-controlled fork. Seven engines run concurrently. No AP, no captive portal, no boot menu — you drive it from a phone over BLE GATT.**
-
-A downstream rewrite by [Luke Switzer](https://github.com/lukeswitz) of Unified Blue for the XIAO ESP32-S3. Replaces the boot selector + per-mode captive portal with a single firmware that runs Detector, Flock-WiFi, Flock-BLE, Foxhunter, Sky Spy, Wardrive, and UniPwn at the same time. BLE is shared across all engines; the WiFi-exclusive engines (Wardrive, Flock-WiFi, Sky Spy, Detector, Foxhunter) hand the radio off via an internal registry.
-
-**Companion app (Flutter — iOS, Android, macOS, currently beta):**
-- Live detection feed with engine-colored rows, RSSI, and one-tap foxhunt / map locate
-- Wardrive mapping with WiGLE CSV export and direct WiGLE API upload
-- Per-engine enable/disable, scan timing, and watchlist configuration
-- Geofence exclusion zones (circle or polygon)
-- Ignore list by MAC, OUI prefix, SSID, or device name
-- 39k+ OUI vendor database ([Ringmast4r/OUI-Master-Database](https://github.com/Ringmast4r/OUI-Master-Database)), Flock OUIs resolve to surveillance labels
-- Per-engine local notifications (first-seen MACs only), iOS Dynamic Island / Live Activity on iPhone 14 Pro+
-
-Install: [latest release](https://github.com/lukeswitz/oui-spy-unified-blue/releases/latest) for Android APK and macOS .app, [TestFlight](https://testflight.apple.com/join/5RCKgnJ2) for iOS / Apple Silicon macOS.
-
-**ESP-NOW mesh** is in the firmware (AES-GCM encrypted, up to 6 peers) but Luke's README marks it "not stable, coming in v0.0.4."
-
----
-
-### [OUI-SPY Detector](https://github.com/colonelpanichacks/ouispy-detector)
-
-**Multi-target BLE device scanner with OUI filtering**
-
-- Detects multiple devices simultaneously by MAC address or manufacturer OUI
-- Web-based configuration portal for target management
-- Smart cooldown system prevents alert spam
-- Audio feedback with different beep patterns for new vs. re-detected devices
-- Persistent configuration storage
-- Good for general surveillance and device monitoring
-
-**Use Cases:** Security monitoring, device inventory, general BLE scanning
-
----
 
 ### [OUI-SPY Foxhunter](https://github.com/colonelpanichacks/ouispy-foxhunter)
 
