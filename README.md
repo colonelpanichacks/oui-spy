@@ -181,6 +181,31 @@ Enhance your OUI-SPY with custom 3D printed cases and accessories:
 4. **Select your mode** from the web selector at `http://192.168.4.1`
 5. **Device reboots** into your chosen mode — hold BOOT 2s to return to menu anytime
 
+### AP credentials per mode
+
+Each mode brings up its own access point with its own credentials. After a
+mode switch you are joining a **different** network, not the selector AP.
+
+| Mode | SSID | Password | Dashboard |
+|------|------|----------|-----------|
+| **Boot Selector** | `oui-spy` | `ouispy123` | `192.168.4.1` |
+| **Detector** | `snoopuntothem` | `astheysnoopuntous` | `192.168.4.1` |
+| **Foxhunter** | `foxhunter` | `foxhunter` | `192.168.4.1` |
+| **Flock-You BLE** | `flockyou` | `flockyou123` | `192.168.4.1` |
+| **Flock-You WiFi** | *none* | — | USB-CDC + Flask dashboard |
+| **Sky Spy** | *none* | — | serial JSON output only |
+
+Selector, Detector, and both Flock-You APs are changeable from their web UI
+and persist to NVS. Foxhunter is fixed.
+
+> **Can't load `192.168.4.1` after joining?** On Android, a network with no
+> internet gets deprioritised and your browser traffic goes out over mobile
+> data instead. Turn mobile data off, or accept the "stay connected" prompt.
+>
+> **Says the password is wrong?** If you previously joined an AP with the
+> same SSID under different credentials, your phone is retrying the saved
+> one. Forget the network and rejoin.
+
 ## Technical Features
 
 ### Advanced BLE Scanning
