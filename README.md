@@ -10,11 +10,23 @@ This board has sick PCB art. Available on [colonelpanic.tech](https://colonelpan
 
 ---
 
+## Flash from your browser
+
+No Python, no PlatformIO, no drivers to install:
+
+**https://colonelpanichacks.github.io/oui-spy-unified-blue/**
+
+Chrome, Edge, or Opera on desktop. Plug in the XIAO ESP32-S3 with a USB-C data cable, click **Connect & Flash**, pick the serial port. Always ships the latest **Unified Blue** firmware.
+
+---
+
 ## Firmware Options
 
 ### [OUI-SPY Unified Blue](https://github.com/colonelpanichacks/oui-spy-unified-blue) ⭐ RECOMMENDED
 
 **All four modes in one firmware — select from a boot menu, reboot, and go.**
+
+**Flash from your browser:** [colonelpanichacks.github.io/oui-spy-unified-blue](https://colonelpanichacks.github.io/oui-spy-unified-blue/)
 
 One flash, four capabilities. The unified build combines Detector, Foxhunter, Flock-You, and Sky Spy into a single firmware with a WiFi-based boot selector. No reflashing needed to switch modes.
 
