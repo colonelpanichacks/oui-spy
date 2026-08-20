@@ -78,19 +78,20 @@ Includes all features from the standalone firmwares below, plus GPS wardriving i
 
 ### [Flock-You](https://github.com/colonelpanichacks/flock-you)
 
-**Flock Safety & Raven surveillance device detector with web dashboard and GPS wardriving**
+**Flock Cam detector — passive 2.4 GHz WiFi tiered-confidence detection with GPS wardriving**
 
-- BLE-only detection — MAC prefix, device name, manufacturer ID (`0x09C8` XUNTONG), Raven UUID fingerprinting
-- WiFi AP dashboard at `192.168.4.1` with live detection feed, pattern DB, and export tools
-- GPS wardriving via phone browser Geolocation API — tags every detection with coordinates
-- Session persistence to flash (SPIFFS) with prior session history tab
-- Export as JSON, CSV, or KML (Google Earth) — current and prior sessions
-- Flask-compatible serial JSON output for live desktop ingestion
-- Crow call boot sounds, detection alerts, and heartbeat audio feedback
-- 200 unique device storage with thread-safe FreeRTOS mutex
-- Companion Flask desktop app in `api/` folder with JSON/CSV/KML import
+- Passive 2.4 GHz promiscuous receiver — no AP, no transmit
+- **Tiered confidence** — IE fingerprint (tier 4) + wildcard-probe signature + OUI matches (tiers 1-3), each with its own distinct audio so you know by ear which method fired
+- Descending channel hop (11 / 6 / 1) at 250 ms dwell to intercept the target's ascending probe cycle fast
+- Session persistence to on-device SPIFFS with CRC validation — previous session viewable in the dashboard history tab
+- Flask companion dashboard in `api/` with live GPS-tagged feed, JSON / CSV / KML (Google Earth) export
+- Standalone (no host required) or plugged-in (dashboard) — no mode switch
+- USB-CDC command protocol: `CMD:DUMP_PREV`, `CMD:DUMP_LIVE`, `CMD:STATUS`, `CMD:VERSION`, `CMD:CLEAR_*`
+- Also folded into OUI-SPY Unified Blue **Mode 3**
 
-**Use Cases:** Surveillance detection, privacy auditing, wardriving, security research
+**Use Cases:** Surveillance-transparency research, privacy auditing, wardriving
+
+> **For research & educational use only.** You assume all liability for any use or misuse of these devices — don't do anything illegal or dumb. Not affiliated with, endorsed by, or associated with any camera-network operator; all trademarks belong to their respective owners.
 
 ---
 
