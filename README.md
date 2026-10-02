@@ -45,6 +45,26 @@ Includes all features from the standalone firmwares below, plus GPS wardriving i
 ---
 
 
+### [OUI-SPY Detector](https://github.com/colonelpanichacks/ouispy-detector)
+
+**BLE alert tool — detect specific devices by MAC, OUI, or advertisement signature, with audio and LED feedback**
+
+- Passive BLE scanning — nothing transmitted, just listening
+- **Six signature classes:** OUI prefix, full MAC, BT SIG company ID, 16-bit service UUID, name substring, and composite filters (Meta/Ray-Ban preset fires only on co-located Luxottica CID + Meta UUID, or name match — RPA-safe)
+- **Built-in OUI Database** of known surveillance hardware — RING, AXON, FLOCK SAFETY, DJI, PARROT, SKYDIO, META / RAY-BAN — one-click vendor signatures from the web UI
+- Web config portal on AP `snoopuntothem` / `astheysnoopuntous` at `192.168.4.1`
+- **MQTT / Home Assistant integration** with auto-discovery — detection blips publish straight to your dashboard
+- **Optional NeoPixel LED** — same firmware with or without: breathing pink while scanning, flash sequence on detection (GPIO4)
+- Persistent device history (up to 100 devices, NVS) with custom aliasing
+- **Burn-in mode** — lock configuration and boot straight into scanning for fixed deployments
+- MAC randomization on boot for privacy
+- Also folded into OUI-SPY Unified Blue **Mode 1**
+
+**Use Cases:** Targeted device detection, surveillance-hardware auditing, security sweeps, asset awareness
+
+---
+
+
 ### [OUI-SPY Foxhunter](https://github.com/colonelpanichacks/ouispy-foxhunter)
 
 **Precision proximity tracker for radio direction finding**
