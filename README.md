@@ -24,11 +24,11 @@ Chrome, Edge, or Opera on desktop. Plug in the XIAO ESP32-S3 with a USB-C data c
 
 ### [OUI-SPY Unified Blue](https://github.com/colonelpanichacks/oui-spy-unified-blue) ⭐ RECOMMENDED
 
-**All four modes in one firmware — select from a boot menu, reboot, and go.**
+**All seven modes in one firmware — select from a boot menu, reboot, and go.**
 
 **Flash from your browser:** [colonelpanichacks.github.io/oui-spy-unified-blue](https://colonelpanichacks.github.io/oui-spy-unified-blue/)
 
-One flash, four capabilities. The unified build combines Detector, Foxhunter, Flock-You, and Sky Spy into a single firmware with a WiFi-based boot selector. No reflashing needed to switch modes.
+One flash, seven capabilities. The unified build combines Detector, Foxhunter, Flock-You, PCAP, BLE Sniff, Sky Spy, and AXEOFF into a single firmware with a WiFi-based boot selector. No reflashing needed to switch modes.
 
 - **Boot selector** on AP `oui-spy` / `ouispy123` at `192.168.4.1`
 - **Hold BOOT button** 2 seconds to return to the selector from any mode
@@ -77,6 +77,21 @@ Includes all features from the standalone firmwares below, plus GPS wardriving i
 - Good for foxhunting competitions and asset recovery
 
 **Use Cases:** Radio direction finding, asset tracking, security device location, RF analysis
+
+---
+
+### [AXEOFF](https://github.com/colonelpanichacks/axeoff)
+
+**Headless Axon detector — no WiFi, no portal, no config. Just beeps. Instant, all-passive detection of Axon body cams, Tasers, and Fleet units.**
+
+- **Zero interface by design** — power on, hear four ascending beeps, and it's already scanning; no AP, no web server, nothing to configure
+- **Seven signatures across both radios** — BT SIG company ID `0x034D`, service UUIDs `0xFC81 / 0xFE6B / 0xFE6C`, IEEE OUI `00:25:DF` on BLE and on WiFi probe/beacon
+- **Four sounds are the entire UX** — boot jingle, 8-bit detection arpeggio, lub-dub heartbeat that accelerates as the target closes in, descending pair when it's gone
+- **All passive, all the time** — passive BLE scan (never sends a SCAN_REQ) plus promiscuous listen-only WiFi; randomized MAC on every boot
+- **Flash from your browser:** [colonelpanichacks.github.io/axeoff](https://colonelpanichacks.github.io/axeoff/)
+- Also folded into OUI-SPY Unified Blue **Mode 7**
+
+**Use Cases:** Body-worn camera detection, surveillance transparency, screen-free field sweeps
 
 ---
 
@@ -209,7 +224,7 @@ Enhance your OUI-SPY with custom 3D printed cases and accessories:
 ## Quick Start
 
 1. **Purchase** your OUI-SPY board from [colonelpanic.tech](https://colonelpanic.tech)
-2. **Flash the [Unified Blue](https://github.com/colonelpanichacks/oui-spy-unified-blue) firmware** — one flash, all four modes
+2. **Flash the [Unified Blue](https://github.com/colonelpanichacks/oui-spy-unified-blue) firmware** — one flash, all seven modes
 3. **Power on** and connect to WiFi AP `oui-spy` / password `ouispy123`
 4. **Select your mode** from the web selector at `http://192.168.4.1`
 5. **Device reboots** into your chosen mode — hold BOOT 2s to return to menu anytime
@@ -227,6 +242,7 @@ mode switch you are joining a **different** network, not the selector AP.
 | **Flock-You BLE** | `flockyou` | `flockyou123` | `192.168.4.1` |
 | **Flock-You WiFi** | *none* | — | USB-CDC + Flask dashboard |
 | **Sky Spy** | *none* | — | serial JSON output only |
+| **AXEOFF** | *none* | — | beeps only |
 
 Selector, Detector, and both Flock-You APs are changeable from their web UI
 and persist to NVS. Foxhunter is fixed.
