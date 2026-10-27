@@ -295,4 +295,4 @@ If you need to verify an OUI, use one of these lookup tools:
 
 ## License
 
-Open source project. Hardware available commercially on [colonelpanic.tech](https://colonelpanic.tech).
+MIT, see [LICENSE](LICENSE). Hardware available commercially on [colonelpanic.tech](https://colonelpanic.tech).
