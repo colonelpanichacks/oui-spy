@@ -170,6 +170,12 @@ Includes all features from the standalone firmwares below, plus GPS wardriving i
 
 Enhance your OUI-SPY with custom 3D printed cases and accessories:
 
+### [OUI-SPY Case – Slide-Lid, Flush USB-C Port](https://makerworld.com/en/models/3644976-oui-spy-case-slide-lid-flush-usb-c-port#profileId-4181453)
+**by 1cyb3rpunk**
+- Compact travel case with slider
+- Single unit protective design for field use and storage
+- Easy access to controls and indicators
+
 ### [OUI-SPY Case with External Antenna Hole](https://makerworld.com/en/models/1807562-oui-spy-case-with-external-antenna-hole#profileId-1928111)
 **by out0fstep**
 - Protective case with external antenna hole for enhanced RF performance
