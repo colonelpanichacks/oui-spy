@@ -16,17 +16,43 @@ No Python, no PlatformIO, no drivers to install:
 
 **https://colonelpanichacks.github.io/oui-spy-unified-blue/**
 
-Chrome, Edge, or Opera on desktop. Plug in the XIAO ESP32-S3 with a USB-C data cable, click **Connect & Flash**, pick the serial port. Always ships the latest **Unified Blue** firmware.
+Chrome, Edge, or Opera on desktop. Plug in the XIAO ESP32-S3 with a USB-C data cable, click **Connect & Flash**, pick the serial port. Two tabs: **App version** (recommended), the firmware for the [OUI SPY Recon app](https://github.com/colonelpanichacks/oui-spy-recon-app), and **OUI SPY Unified Blue**, the standalone firmware with its own Wi-Fi boot menu.
 
 ---
 
 ## Firmware Options
 
-### [OUI-SPY Unified Blue](https://github.com/colonelpanichacks/oui-spy-unified-blue) ⭐ RECOMMENDED
+### [OUI SPY Recon app](https://github.com/colonelpanichacks/oui-spy-recon-app) RECOMMENDED
+
+**Your OUI SPY's screen: the surveillance gear, drones and trackers around you, on your phone and on a map. Android and macOS.**
+
+**Get the app:** [Releases](https://github.com/colonelpanichacks/oui-spy-recon-app/releases/latest) &middot; **Flash the board:** [colonelpanichacks.github.io/oui-spy-unified-blue](https://colonelpanichacks.github.io/oui-spy-unified-blue/) (the App version tab)
+
+- **Detections** of body cameras, recording glasses, drones and trackers, matched by what they broadcast and named by what they are. Flag any device yourself and get alerts.
+- **Drones:** Remote ID drones and their pilots live on the map (on an OUI SPY, while it runs Sky Spy).
+- **One map** for detections, drones, your boards and your track, plus wardriving: the Wi-Fi networks and Bluetooth devices you pass, logged with GPS.
+- **The mesh:** several boards on a long-range mesh, and the whole fleet from one phone.
+- **Updates from the app:** new firmware for the board over Bluetooth, USB or the mesh, and signed app updates.
+
+**Use Cases:** Spotting surveillance gear and drones on the move, mapping what is around you, running a fleet of boards from one phone.
+
+---
+
+### [OUI SPY Recon](https://github.com/colonelpanichacks/oui-spy-recon-app#oui-spy-recon)
+
+**The handheld built around the app. Coming.**
+
+<img src="https://raw.githubusercontent.com/colonelpanichacks/oui-spy-recon-app/main/img/recon-case.jpg" alt="OUI SPY Recon" width="420">
+
+A screen of its own and a second radio chip (ESP32-C5), which brings 5 GHz Wi-Fi, 802.15.4 and 5.8 GHz FPV video. It also has its own GPS, a Grove port for sensors, and it runs the mesh. It works with the same app.
+
+---
+
+### [OUI-SPY Unified Blue](https://github.com/colonelpanichacks/oui-spy-unified-blue)
 
 **All seven modes in one firmware — select from a boot menu, reboot, and go.**
 
-**Flash from your browser:** [colonelpanichacks.github.io/oui-spy-unified-blue](https://colonelpanichacks.github.io/oui-spy-unified-blue/)
+**Flash from your browser:** [colonelpanichacks.github.io/oui-spy-unified-blue](https://colonelpanichacks.github.io/oui-spy-unified-blue/unified-blue/) (the OUI SPY Unified Blue tab)
 
 One flash, seven capabilities. The unified build combines Detector, Foxhunter, Flock-You, PCAP, BLE Sniff, Sky Spy, and AXEOFF into a single firmware with a WiFi-based boot selector. No reflashing needed to switch modes.
 
@@ -229,11 +255,19 @@ Enhance your OUI-SPY with custom 3D printed cases and accessories:
 
 ## Quick Start
 
+### With the app (recommended)
+
 1. **Purchase** your OUI-SPY board from [colonelpanic.tech](https://colonelpanic.tech)
-2. **Flash the [Unified Blue](https://github.com/colonelpanichacks/oui-spy-unified-blue) firmware** — one flash, all seven modes
-3. **Power on** and connect to WiFi AP `oui-spy` / password `ouispy123`
-4. **Select your mode** from the web selector at `http://192.168.4.1`
-5. **Device reboots** into your chosen mode — hold BOOT 2s to return to menu anytime
+2. **Get the [OUI SPY Recon app](https://github.com/colonelpanichacks/oui-spy-recon-app/releases/latest)** for Android or macOS
+3. **Flash the board** from the [web flasher](https://colonelpanichacks.github.io/oui-spy-unified-blue/)'s **App version** tab
+4. **Pair it** in the app: **Settings > Connections**, switch on **Board over Bluetooth** and pick your board. The first time, it asks for the PIN: `123456`
+
+### Standalone: Unified Blue
+
+1. **Flash the [Unified Blue](https://github.com/colonelpanichacks/oui-spy-unified-blue) firmware** from the [web flasher](https://colonelpanichacks.github.io/oui-spy-unified-blue/unified-blue/)'s **OUI SPY Unified Blue** tab — one flash, all seven modes
+2. **Power on** and connect to WiFi AP `oui-spy` / password `ouispy123`
+3. **Select your mode** from the web selector at `http://192.168.4.1`
+4. **Device reboots** into your chosen mode — hold BOOT 2s to return to menu anytime
 
 ### AP credentials per mode
 
